@@ -64,7 +64,7 @@ echo -n "\", "
 
 # local ip
 #ips=`hostname --ip-address`
-ipsaddr=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'`
+ipsaddr=`/sbin/ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'`
 echo -n "\"IPv4\" : \""
 #ip -f inet a | grep "$iface" | awk '/inet/{printf $2 }'
 echo $ipsaddr
